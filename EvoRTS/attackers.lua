@@ -18,8 +18,11 @@ attackerlist = {
     "eamphibmedtank",
     "eallterrmed",
     "eallterrheavy",
+	"eallterrassault",
 	"eriottank2",
     "eamphibriot",
     "eallterrriot",
 	"eorb",
+	"eorbai",
+	"edrone",
 }
