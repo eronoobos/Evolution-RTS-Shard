@@ -1,7 +1,8 @@
 
-require "taskqueues"
-require "taskqueuebehaviour"
-require "attackerbehaviour"
+shard_include "taskqueues"
+shard_include "taskqueuebehaviour"
+shard_include "attackerbehaviour"
+shard_include "pointcapturerbehaviour"
 --require "missingfactorybehaviour"
 --require "engineerturretbehaviour"
 --require "autoreclaimbehaviour"
@@ -28,7 +29,7 @@ behaviours = {
 		TaskQueueBehaviour,
 		--FactoryRegisterBehaviour,
 	},
-	ecommander = {
+	ecommanderai = {
 		TaskQueueBehaviour,
 		--LowEnergyBehaviour,
 		--EngineerTurretBehaviour,
@@ -78,6 +79,9 @@ function defaultBehaviours(unit)
 	else
 		if IsAttacker(unit) then
 			table.insert(b,AttackerBehaviour)
+		end
+		if IsPointCapturer(unit) then
+			table.insert(b,PointCapturerBehaviour)
 		end
 	end
 	

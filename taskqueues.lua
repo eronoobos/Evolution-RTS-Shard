@@ -8,36 +8,30 @@ math.random(); math.random(); math.random()
 local function AirOrLand()
 	local r = math.random(0,3)
 	if r == 0 then
-			return "eairplantai"
+			return "eairplant"
 		elseif r == 1 then
-			return "ebasefactoryai"
+			return "ebasefactory"
 		elseif r == 2 then
-			return "eamphibfacai"
+			return "eamphibfac"
 		else 
-			return "eminifacai"
+			return "eminifac"
 	end
-end
-
-local function Destroyer()
-	return "eexperimentalfac"
 end
 
 local function StartFactory()
 	local r = math.random(0,3)
 	if r == 0 then
-			return "eairplantai"
+			return "eairplant"
 		elseif r == 1 then
-			return "ebasefactoryai"
+			return "ebasefactory"
 		elseif r == 2 then
-			return "eamphibfacai"
+			return "eamphibfac"
 		else 
-			return "eminifacai"
+			return "eminifac"
 	end
 end
 
-
 local factory = {
-   "eengineer5ai",
    "elighttank3",
    "elighttank3",
    "elighttank3",
@@ -50,7 +44,6 @@ local factory = {
    "eheavytank3",
    "eheavytank3",
    "eheavytank3",
-   "eengineer5ai",
    "emissiletank",
    "emissiletank",
    "emissiletank",
@@ -60,86 +53,64 @@ local factory = {
    "emissiletank",
    "eartytank",
    "eartytank",
+   "eengineer5",
 }
 
 local firstEngineer = {
-   "emetalextractorai",
-   "emetalextractorai",
-   "emetalextractorai",
-   "emetalextractorai",
-   "emetalextractorai",
+	--{action = "wait", frames = 30}
    AirOrLand,
-   "eorbai",
-   "emetalextractorai",
-   "emetalextractorai",
-   "esolar2ai",
-   "emetalextractorai",
-   "emetalextractorai",
-   "esolar2ai",
-   "emetalextractorai",
-   "elightturret2ai",
-   "eorbai",
-   "emetalextractorai",
-   "emetalextractorai",
-   "emetalextractorai",
-   "emetalextractorai",
-   "emetalextractorai",
-   "emediumgenai",
-   "emetalextractorai",
-   "eheavyturret2ai",
-   "eorbai",
-   "emetalextractorai",
-   "emineai",
-   "emetalextractorai",
-   "emineai",
-   "esolar2ai",
-   "emetalextractorai",
-   "emineai",
-   "efusion2ai",
-   "emetalextractorai",
-   "emineai",
-   "emetalextractorai",
-   "emineai",
-   "esolar2ai",
-   "emetalextractorai",
-   "emineai",
-   "eheavyturret2ai",
-   "emineai",
+   { action = "moverelative", position = {x = math.random(-750, 750), y = math.random(-750, 750), z = math.random(-750, 750)} },
+   "emediumgen",
+   { action = "moverelative", position = {x = math.random(-750, 750), y = math.random(-750, 750), z = math.random(-750, 750)} },
+   "estorage",
+   { action = "moverelative", position = {x = math.random(-750, 750), y = math.random(-750, 750), z = math.random(-750, 750)} },
+   "estorage",
+   { action = "moverelative", position = {x = math.random(-750, 750), y = math.random(-750, 750), z = math.random(-750, 750)} },
+   "estorage",
+   { action = "moverelative", position = {x = math.random(-750, 750), y = math.random(-750, 750), z = math.random(-750, 750)} },
+   "estorage",
+   { action = "moverelative", position = {x = math.random(-750, 750), y = math.random(-750, 750), z = math.random(-750, 750)} },
+   "emediumgen",
+   { action = "moverelative", position = {x = math.random(-750, 750), y = math.random(-750, 750), z = math.random(-750, 750)} },
+   "efusion2",
+   { action = "moverelative", position = {x = math.random(-750, 750), y = math.random(-750, 750), z = math.random(-750, 750)} },
+   "efusion2",
+   { action = "moverelative", position = {x = math.random(-750, 750), y = math.random(-750, 750), z = math.random(-750, 750)} },
+   "efusion2",
+   { action = "moverelative", position = {x = math.random(-750, 750), y = math.random(-750, 750), z = math.random(-750, 750)} },
+   "efusion2",
+   { action = "moverelative", position = {x = math.random(-750, 750), y = math.random(-750, 750), z = math.random(-750, 750)} },
+--   "ecruisesilo",
 }
 
 local engineers = {
-   "emetalextractorai",
-   "emetalextractorai",
-   "emetalextractorai",
-   "esolar2ai",
-   "emetalextractorai",
-   "emetalextractorai",
-   "esolar2ai",
-   "emetalextractorai",
-   "elightturret2ai",
+   { action = "moverelative", position = {x = math.random(-750, 750), y = math.random(-750, 750), z = math.random(-750, 750)} },
+   "emediumgen",
+   { action = "moverelative", position = {x = math.random(-750, 750), y = math.random(-750, 750), z = math.random(-750, 750)} },
+   "estorage",
+   { action = "moverelative", position = {x = math.random(-750, 750), y = math.random(-750, 750), z = math.random(-750, 750)} },
+   "estorage",
+   { action = "moverelative", position = {x = math.random(-750, 750), y = math.random(-750, 750), z = math.random(-750, 750)} },
+   "estorage",
+   { action = "moverelative", position = {x = math.random(-750, 750), y = math.random(-750, 750), z = math.random(-750, 750)} },
    AirOrLand,
-   "eorbai",
-   "emetalextractorai",
-   "emineai",
-   "emetalextractorai",
-   "emineai",
-   "emediumgenai",
-   "emetalextractorai",
-   "emineai",
-   "esolar2ai",
-   "emetalextractorai",
-   "emineai",
-   "emetalextractorai",
-   "emineai",
-   "efusion2ai",
-   "emetalextractorai",
-   "emineai",
-   "emineai",
-   "eheavyturret2ai",
+   { action = "moverelative", position = {x = math.random(-750, 750), y = math.random(-750, 750), z = math.random(-750, 750)} },
+   "estorage",
+   { action = "moverelative", position = {x = math.random(-750, 750), y = math.random(-750, 750), z = math.random(-750, 750)} },
+   "emediumgen",
+   { action = "moverelative", position = {x = math.random(-750, 750), y = math.random(-750, 750), z = math.random(-750, 750)} },
+   "efusion2",
+   { action = "moverelative", position = {x = math.random(-750, 750), y = math.random(-750, 750), z = math.random(-750, 750)} },
+   "efusion2",
+   { action = "moverelative", position = {x = math.random(-750, 750), y = math.random(-750, 750), z = math.random(-750, 750)} },
+   "efusion2",
+   { action = "moverelative", position = {x = math.random(-750, 750), y = math.random(-750, 750), z = math.random(-750, 750)} },
+   "efusion2",
+   { action = "moverelative", position = {x = math.random(-750, 750), y = math.random(-750, 750), z = math.random(-750, 750)} },
+--   "ecruisesilo",
 }
 
 local airplant = {
-   "eairengineerai",
    "egunship2",
    "egunship2",
    "egunship2",
@@ -148,10 +119,18 @@ local airplant = {
    "efighter",
    "ebomber",
    "ebomber",
+   "egunship2",
+   "egunship2",
+   "egunship2",
+   "egunship2",
+   "efighter",
+   "efighter",
+   "ebomber",
+   "ebomber",
+   "eairengineer",
 }
 
 local amphibfactory = {
-   "eamphibengineerai",
    "eamphibbuggy",
    "eamphibbuggy",
    "eamphibbuggy",
@@ -159,10 +138,13 @@ local amphibfactory = {
    "eamphibbuggy",
    "eamphibriot",
    "eamphibriot",
+    "eamphibneedle",
+   "eamphibneedle",
+   "eamphibneedle",
+   "eamphibneedle",
    "eamphibmedtank",
    "eamphibmedtank",
    "eamphibmedtank",
-	"eamphibengineerai",
    "eamphibrock",
    "eamphibrock",
    "eamphibrock",
@@ -171,10 +153,10 @@ local amphibfactory = {
    "eamphibrock",
    "eamphibarty",
    "eamphibarty",
+   "eamphibengineer",
 }
 
 local allterrfactory = {
-   "eallterrengineerai",
    "eallterrlight",
    "eallterrlight",
    "eallterrlight",
@@ -186,7 +168,6 @@ local allterrfactory = {
    "eallterrmed",
    "eallterrmed",
    "eallterrmed",
-   "eallterrengineerai",
    "eallterrheavy",
    "eallterrheavy",
    "eallterrheavy",
@@ -194,12 +175,7 @@ local allterrfactory = {
    "eallterrheavy",
    "eallterrheavy",
    "eallterrassault",
-}
-
-local destroyerfactory = {
-   "eexkrabgroth",
-   "eextankdestroyer",
-   "eexnukearty",
+   "eallterrengineer",
 }
 
 local function engineerlist(beh)
@@ -213,14 +189,12 @@ end
 
 taskqueues = {
    ecommanderai = engineerlist,
-   ebasefactoryai = factory,
-   eengineer5ai = engineerlist,
-   eallterrengineerai = engineerlist,
-   eamphibengineerai = engineerlist,
-   eairengineerai = engineerlist,
-   eairplantai = airplant,
-   eamphibfacai = amphibfactory,
-   eminifacai = allterrfactory,
-   eexperimentalfac = destroyerfactory,
-   
+   ebasefactory = factory,
+   eengineer5 = engineerlist,
+   eallterrengineer = engineerlist,
+   eamphibengineer = engineerlist,
+   eairengineer = engineerlist,
+   eairplant = airplant,
+   eamphibfac = amphibfactory,
+   eminifac = allterrfactory,
 }

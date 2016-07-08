@@ -23,6 +23,5 @@ attackerlist = {
     "eamphibriot",
     "eallterrriot",
 	"eorb",
-	"eorbai",
 	"edrone",
 }
